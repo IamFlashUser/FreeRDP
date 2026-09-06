@@ -388,7 +388,7 @@ static BOOL xf_cliprdr_is_atom_available(xfClipboard* clipboard, Atom atom)
 	WINPR_ASSERT(clipboard);
 
 	char* name = Safe_XGetAtomName(clipboard->log, clipboard->xfc->display, atom);
-	for (size_t x = 0; x < clipboard->numClientFormats; x++)
+	for (size_t x = 0; x < clipboard->clientAvailableFormatAtomsCount; x++)
 	{
 		WINPR_ASSERT(clipboard->clientAvailableFormatAtoms);
 
